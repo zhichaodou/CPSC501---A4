@@ -8,7 +8,7 @@ def main():
      x_test, y_test = data
      print(f"--Load Model {sys.argv[2]}--")
      #Load the model that should be in sys.argv[2]
-     model = None     
+     model = keras.models.load_model(sys.argv[2])     
      pick = input(f"Pick test_image (0 -> {len(x_test)-1}):")
      while pick.isdigit() and int(pick) >= 0 and int(pick) < len(x_test):
         pick = int(pick)

@@ -8,7 +8,7 @@ def main():
      class_names = check_args()
      print(f"--Load Model {sys.argv[2]}--")
      #Load the model that should be in sys.argv[2]
-     model = None
+     model = keras.models.load_model(sys.argv[2])
      print(f"--Load Image {sys.argv[3]}--")
      img = plt.imread(sys.argv[3])
      if np.amax(img.flatten()) > 1:

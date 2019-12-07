@@ -9,7 +9,7 @@ def main():
      class_names = check_args()
      print(f"--Load Model {sys.argv[2]}--")
      #Load the model that should be in sys.argv[2]
-     model = None
+     model = keras.models.load_model(sys.argv[2])
      draw(model, class_names)
 
 def predict(model, class_names, img, true_label):

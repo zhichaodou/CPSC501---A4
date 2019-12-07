@@ -33,3 +33,4 @@ print(f"Model Loss:    {model_loss:.2f}")
 print(f"Model Accuray: {model_acc*100:.1f}%")
 
 #Save Model
+model.save('MNIST.h5')

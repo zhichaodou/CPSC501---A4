@@ -29,10 +29,10 @@ model = tf.keras.models.Sequential([
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
 print("--Fit model--")
-model.fit(x_train, y_train, epochs=1, verbose=2)
+model.fit(x_train, y_train, epochs=10, verbose=1)
 
 print("--Evaluate model--")
-model_loss, model_acc = model.evaluate(x_test,  y_test, verbose=2)
+model_loss, model_acc = model.evaluate(x_test,  y_test, verbose=1)
 print(f"Model Loss:    {model_loss:.2f}")
 print(f"Model Accuray: {model_acc*100:.1f}%")
 

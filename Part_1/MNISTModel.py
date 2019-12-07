@@ -17,7 +17,10 @@ x_train, x_test = x_train / 255.0, x_test / 255.0
 print("--Make model--")
 model = tf.keras.models.Sequential([
   tf.keras.layers.Flatten(input_shape=(28, 28)),
-  tf.keras.layers.Dense(10, activation='sigmoid')
+  tf.keras.layers.Dense(300, activation='relu'),
+  tf.keras.layers.Dense(150, activation='relu'),
+  tf.keras.layers.Dense(50, activation='relu'),
+  tf.keras.layers.Dense(10,activation='softmax')
 ])
 model.compile(optimizer='sgd', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 

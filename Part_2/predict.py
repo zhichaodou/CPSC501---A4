@@ -20,10 +20,10 @@ def main():
 def predict(model, class_names, img, true_label):
     img = np.array([img])
     #Replace these two lines with code to make a prediction
-    prediction = [1/10,1/10,1/10,1/10,1/10,1/10,1/10,1/10,1/10,1/10]
+    prediction = model.predict(img)
     #Determine what the predicted label is
-    predicted_label = 0
-    plot(class_names, prediction, true_label, predicted_label, img[0])
+    predicted_label = np.argmax(prediction)
+    plot(class_names, prediction[0], true_label, predicted_label, img[0])
     plt.show()
 
 def check_args():

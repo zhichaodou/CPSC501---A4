@@ -22,7 +22,7 @@ model = tf.keras.models.Sequential([
   tf.keras.layers.Dense(50, activation='relu'),
   tf.keras.layers.Dense(10,activation='softmax')
 ])
-model.compile(optimizer='sgd', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
 print("--Fit model--")
 model.fit(x_train, y_train, epochs=1, verbose=2)
